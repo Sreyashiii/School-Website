@@ -10,12 +10,42 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="header.css">
     <title>School Website</title>
   </head>
+  <style>
+    .form{
+ position: absolute;
+ text-align: center;
+   height: 50%;
+   width: 30%;
+   left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+   input{
+    margin-top: 3%;
+   }
+   textarea{
+    display: block;
+    margin: 0 auto;
+    margin-top: 2%;
+   }
+   button{
+    margin-top: 2%;
+    border: none;
+    cursor: pointer;
+   }
+   button:hover{
+    background-color: rgb(180, 180, 180);
+   }
+  </style>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
+          <img src="logo.png" alt="Our logo" class="logo">
           <a class="navbar-brand" href="./index.html">School Website</a>
           <button
             class="navbar-toggler"
@@ -56,9 +86,20 @@
       <div class="row">
         <div class="col-12">
           <h2>Contact Us!</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          </p>
+       
+        <div class="form" >
+         <form>
+         <input type="text" name="fname" placeholder="First name" required>
+         <input type="text" name="lname" placeholder="Last name" required>
+         <input type="email" name="mail" placeholder="Email" class="mail" required>
+         <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
+         <button onclick="send()">Send</button>
+        </form>
+</div>
+
+
+
+
         </div>
       </div>
     </div>
